@@ -36,8 +36,9 @@ Here is two boxplots showing the distributions of the xpat10 and xpat15 columns 
   height="600"
   frameborder="0"
 ></iframe>
+
 <iframe
-  src="boxplot2.png"
+  src="boxplot2\..png"
   width="800"
   height="600"
   frameborder="0"
@@ -60,11 +61,11 @@ This other plot shows us creep score compared with number of minions killed. How
 ></iframe>
 This scatterplot is colored based on wether a team wins or loses. It uses xp and creep score during early game, to see how these relate to win rates. We can clearly see that there is an overlap, but clear grouping where shorter games and higher kills seem to indicate a win, whereas the longer and lower kills and up losing.
 <iframe
-  src = "xp"
+  src = "xp.png"
   width="800"
   height="600"
   frameborder="0"
->plot1</iframe>
+></iframe>
 ## Data Missingness
 There is no NMAR data in the dataset.
 Lets choose the xpat10 column to determine missingness, which is apparent in ~10% of the columns. This along with the rest of the time-based statistics, are missing in many of the values. By performing permutation testing against each of the other columns, we can create a list of p-values to see if there is an association with its missingness.
