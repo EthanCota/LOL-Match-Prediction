@@ -38,7 +38,7 @@ Here is two boxplots showing the distributions of the xpat10 and xpat15 columns 
 ></iframe>
 
 <iframe
-  src="boxplot2\..png"
+  src="boxplot2.%2E%2E.png"
   width="800"
   height="600"
   frameborder="0"
