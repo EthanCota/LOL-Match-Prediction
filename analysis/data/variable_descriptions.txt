@@ -1,0 +1,161 @@
+match_info_cols = [
+    'gameid',
+    'datacompleteness',
+    'url',
+    'league',
+    'year',
+    'split', SPRING OR SUMMER
+    'date',
+    'game',
+    'patch',
+    'gamelength',
+    'result',
+]
+
+team_info_cols = [
+    'teamname', #team info
+    'teamid',
+    'playoffs',
+
+    'ban1', #team picks and bans (prevent other teams from picking players)
+    'ban2',
+    'ban3',
+    'ban4',
+    'ban5',
+    'pick1',
+    'pick2',
+    'pick3',
+    'pick4',
+    'pick5',
+]
+
+team_stats_cols = [
+    'teamkills',    #kills and deaths
+    'teamdeaths',
+    'team kpm', PROBABLY KILLS PER MINUTE, BUT KP ALSO STANDS FOR KILL PARTICIPATION WHICH IS YOUR KILLS + ASSISTS
+    'ckpm', CREEP KILLS PER MINUTE IM GUESSING, CREEPS OR CS ARE THE MINIONS, YOU GET ROUGHLY 20 GOLD PER MINION KILL, VS KILLING ANOTHER PLAYER IS ROUGHLY 300
+
+    'gspd', #gold stats? NO IDEA
+    'gpr',
+]
+
+TODO_TEAM_UNKNOWN = [
+    'firstdragon', DRAGONS ARE NEUTRAL BOSSES EITHER TEAM CAN KILL
+    'x',
+    'opp_dragons',
+    'elementaldrakes', ELEMENTAL DRAKES WILL SPAWN UNTIL 1 TEAM HAS KILLED 4 DRAGONS, THEN YOU GET THE ELDER DRAGON, WHICH IS OP
+    'opp_elementaldrakes',
+    'infernals',
+    'mountains',
+    'clouds',
+    'oceans',
+    'chemtechs',
+    'hextechs',
+    'dragons (type unknown)',
+    'elders',
+    'opp_elders',
+    'firstherald', ANOTHER NEUTRAL BOSS, THERE USED TO BE 2 HERALDS PER GAME PRETTY RECENTLY, NOW THERE'S VOID GRUBS THEN 1 HERALD
+    'heralds',
+    'opp_heralds',
+    'void_grubs',
+    'opp_void_grubs',
+    'firstbaron', BARON IS LIKE THE ELDER DRAGON
+    'barons',
+    'opp_barons',
+    'firsttower', EACH TEAM GETS 11 TOWERS, FIRST TOWER BLOOD GETS YOU LIKE 300 EXTRA GOLD
+    'towers',
+    'opp_towers',
+    'firstmidtower',
+    'firsttothreetowers',
+    'turretplates', TURRET PLATES ARE ON THE FRONT TOWERS, THERE ARE 5 PER TOWER AND THEY EACH GIVE 125 GOLD INDIVIDUALLY FOR KILLING THEM, BUT THEY DESPAWN AT 14 MINUTES
+    'opp_turretplates',
+]
+
+player_info_cols = [
+    'participantid',
+    'side', RED VS BLUE!
+    'position',
+    'playername',
+    'playerid',
+
+    'champion', ME
+
+]
+player_stats_cols = [
+    'kills',          #kill death information
+    'deaths',
+    'assists',
+    'doublekills', NO EXTRA GOLD FOR MULTIKILLS ITS JUST COOL
+    'triplekills',
+    'quadrakills',
+    'pentakills',
+
+    'firstblood',       #first events FIRST BLOOD IS 400 GOLD INSTEAD OF 300
+    'firstbloodkill',
+    'firstbloodassist',
+    'firstbloodvictim',
+
+    'inhibitors',       #TODO figure out what theseare IN EACH TEAMS BASE ARE THREE INHIBITORS, YOU HAVE TO GET PAST 3 TOWERS IN A LANE TO REACH AN INHIBITOR.  KILLING ONE WILL GIVE YOU 50 GOLD,
+    'opp_inhibitors',  AND KILLING AN INHIBITOR WILL ALSO SPAWN A SUPER MINION ON EACH MINION WAVE WITH A BUNCH OF HP.  KILLING SUPER MINIONS GETS YOU 50 GOLD AND AFTER 5 MINUTES THE INHIB WILL
+    'damagetochampions', RESPAWN AND STOP SENDING SUPERS, SO KILLING AN INHIB HELPS SIEGE THE ENEMY BUT ALSO GIVES THEM GOLD.  IF YOU KILL ALL INHIBS AT ONCE THEN EACH WAVE WILL SEND 2 SUPERS
+    'dpm',
+    'damageshare',
+    'damagetakenperminute',
+    'damagemitigatedperminute', DAMAGE YOU BLOCKED WITH SHIELDING
+    'wardsplaced', THE WHOLE MAP IS NATURALLY DARK ON THE MINIMAP UNLESS THERES A TOWER, ALLY CHAMPION, OR MINION SOMEWHERE.  FREE WARDS PROVIDE TEMPORARY VISION WHEN YOU PLACE THEM DOWN
+    'wpm',  EVERYONE GETS A FREE WARD EVERY 2 MINUTES, OR YOU CAN TRADE YOUR FREE WARDS FOR A WARD SWEEPER WITH A 90 SECOND COOLDOWN.  FREE WARDS TURN INVISIBLE SO YOU NEED TO SWEEP THEM.
+    'wardskilled',
+    'wcpm',
+    'controlwardsbought', CONTROL WARDS COST 75 GOLD AND LAST UNTIL THEYRE KILLED BY THE ENEMY, THEY ARE NOT INVISIBLE.  IF THERES AN ENEMY FREE WARD BY A CONTROL WARD, THE FREE WARD IS DISABLED.
+    'visionscore', YOU GET VISION SCORE FOR PLACING AND DESTROYING WARDS
+    'vspm',
+
+    'totalgold',        #Gold stats
+    'earnedgold',
+    'earned gpm',
+    'earnedgoldshare',
+    'goldspent', YOU SPEND GOLD FOR ITEMS, SO GOLD IS USELESS UNTIL YOU SPEND IT
+
+    'total cs',         #TODO RANDOM STATS  CS ARE THE MINIONS.  EACH MINION WAVE SPAWNS 6 OR 7 MINIONS, UNLESS THERE ARE SUPER MINIONS.
+    'minionkills',
+    'monsterkills', EACH SIDE HAS NEUTRAL MONSTERS IN THEIR JUNGLE.  THERE ARE 12 TOTAL MONSTER "CAMPS" ON THE MAP, AND I WANT TO SAY 40ISH MONSTERS, NOT INCLUDING DRAGON/GRUBS/HERALD/BARON
+    'monsterkillsownjungle',  KILLING MONSTERS WILL ALSO INCREAS YOUR CS SCORE
+    'monsterkillsenemyjungle',
+    'cspm',
+    'goldat10',
+    'xpat10', YOU ALSO GET EXPERIENCE FROM CSING, WHICH WILL MAKE YOU LEVEL UP AND GET MORE STATS, AND YOU UNLOCK/UPGRADE YOUR CHAMPIONS ABILITIES WHEN YOU LEVEL UP.
+    'csat10',
+    'opp_goldat10',
+    'opp_xpat10',
+    'opp_csat10',
+    'golddiffat10',
+    'xpdiffat10',
+    'csdiffat10',
+    'killsat10',
+    'assistsat10',
+    'deathsat10',
+    'opp_killsat10',
+    'opp_assistsat10',
+    'opp_deathsat10',
+    'goldat15',
+    'xpat15',
+    'csat15',
+    'opp_goldat15',
+    'opp_xpat15',
+    'opp_csat15',
+    'golddiffat15',
+    'xpdiffat15',
+    'csdiffat15',
+    'killsat15',
+    'assistsat15',
+    'deathsat15',
+    'opp_killsat15',
+    'opp_assistsat15',
+    'opp_deathsat15',  MOST GAMES GO TO ABOUT 20 MINUTES BUT IT COULD BE ANYWHERE FROM 12 TO 60.  IDK IF YOURE ONLY ANALYZING PRO GAMES, BUT IF NOT, YOURE ALLOWED TO SURRENDER AT 15'.  PROS CANT FORFEIT
+]
+
+
+
+'''
+TODO: playoffs
+'''

@@ -31,21 +31,21 @@ There is a lot of missing data. For many columns such as the 'pick'/'ban' column
 ### Exploratory Analysis
 Here is two boxplots showing the distributions of the xpat10 and xpat15 columns this shows us how the distribution of this value seems to move up as the game time increases.
 <iframe
-  src="boxplot.png"
+  src=".\\plots\\boxplot.png"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 
 <iframe
-  src="boxplot2.%2E%2E.png"
+  src=".\\plots\\boxplot2.png"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 This plot shows us a logorithmic bar plot that displays the distribution of neutral monster kills. The vast majority only totals to one, but when we compare with result, a single value is unlikely to tell us much, so we should utilize an aggregate measure.
 <iframe
-  src="neutralkills.png"
+  src=".\\plots\\neutralkills.png"
   width="800"
   height="600"
   frameborder="0"
@@ -54,14 +54,14 @@ This plot shows us a logorithmic bar plot that displays the distribution of neut
 This other plot shows us creep score compared with number of minions killed. However there is clear grouping in the data, showing us there are multiple other variables contributing to creep score.
 
 <iframe
-  src="creep.png"
+  src=".\\plots\\creep.png"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 This scatterplot is colored based on wether a team wins or loses. It uses xp and creep score during early game, to see how these relate to win rates. We can clearly see that there is an overlap, but clear grouping where shorter games and higher kills seem to indicate a win, whereas the longer and lower kills and up losing.
 <iframe
-  src = "xp.png"
+  src = ".\\plots\\xp.png"
   width="800"
   height="600"
   frameborder="0"

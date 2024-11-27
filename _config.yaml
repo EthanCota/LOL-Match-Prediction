@@ -1,5 +1,5 @@
 title: League of Legends Data Science Final Project
-description: yeah
+description: This is a final project for the course Data Science in Practice at the University of Helsinki. The project is about predicting the outcome of League of Legends games using machine learning.
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-slate
